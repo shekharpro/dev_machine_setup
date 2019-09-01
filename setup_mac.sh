@@ -55,6 +55,8 @@ echo "[Executing] : brew install yarn"
 brew install yarn
 echo "[Executing] : brew install tree"
 brew install tree
+echo "[Executing] : brew install htop"
+brew install htop
 echo "[Executing] : brew cleanup"
 brew cleanup
 echo "===================Done installing Formulas======================"

@@ -1,7 +1,7 @@
 # dev_machine_setup
 Script to install common used tools on a new Mac (WIP)
 
-This repo contains scripts to configure new OS X dev machines. The script will install/upgrade Xcode command few utility and development tools.
+This repo contains scripts to configure new OS X dev machines. The script will install/upgrade few utilities and development tools.
 
 Configuring a new computer
 

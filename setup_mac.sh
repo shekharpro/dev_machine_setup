@@ -21,8 +21,6 @@ echo "[Executing] : brew cask install evernote"
 brew cask install evernote
 echo "[Executing] : brew cask install firefox"
 brew cask install firefox
-echo "[Executing] : brew cask install evernote"
-brew cask install evernote
 echo "[Executing] : brew cask install spotify"
 brew cask install spotify
 echo "[Executing] : brew cask install zoomus"

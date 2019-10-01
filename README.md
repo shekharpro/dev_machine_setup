@@ -33,6 +33,7 @@ Configuring a new computer
 - `tree`
 - `htop`
 - `tig`
+- `bat`
 - Oracle Jdk : `java`
 - `node`
 

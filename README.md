@@ -35,3 +35,7 @@ Configuring a new computer
 - `tig`
 - Oracle Jdk : `java`
 - `node`
+
+
+
+//TODO:  Looking forward to pick things from Kent's dotfiles https://github.com/kentcdodds/dotfiles/blob/master/.macos

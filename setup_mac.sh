@@ -57,6 +57,8 @@ echo "[Executing] : brew install htop"
 brew install htop
 echo "[Executing] : brew install tig"
 brew install tig
+echo "[Executing] : brew install bat"
+brew install bat
 echo "[Executing] : brew install oracle-jdk"
 brew install oracle-jdk
 echo "[Executing] : brew cleanup"

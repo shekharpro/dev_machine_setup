@@ -17,6 +17,8 @@ echo "[Executing] : brew cask install shiftit"
 brew cask install shiftit
 echo "[Executing] : brew cask install visual-studio-code"
 brew cask install visual-studio-code
+echo "[Executing] : brew cask install dotnet-sdk"
+brew cask install dotnet-sdk
 echo "[Executing] : brew cask install evernote"
 brew cask install evernote
 echo "[Executing] : brew cask install firefox"

@@ -13,6 +13,7 @@ Configuring a new computer
 - launchbar : https://www.obdev.at/products/launchbar/index.html
 - shiftit : https://github.com/fikovnik/ShiftIt
 - Visual Studio Code
+- Dotnet Core SDK
 - Firefox
 - Evernote
 - Spotify

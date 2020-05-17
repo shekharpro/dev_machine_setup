@@ -39,6 +39,8 @@ echo "[Executing] : brew cask install macpass"
 brew cask install macpass
 echo "brew cask install postman"
 brew cask install postman
+echo "brew cask install dbeaver-community"
+brew cask install dbeaver-community
 echo "===================Done installing casks======================"
 echo "=============================================================="
 echo "-----------------------------------------------------------------"

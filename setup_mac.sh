@@ -69,8 +69,8 @@ echo "===================Done installing Formulas======================"
 echo "================================================================="
 echo "------------------------------------------------------------"
 echo "----------------------Updating zshrc------------------------"
-echo "[Executing] : Installing ZSH : sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\" \"\" --unattended"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+echo "[Executing] : Installing ZSH : sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 #-----------------------------------------------------
 #-----------------------------------------------------

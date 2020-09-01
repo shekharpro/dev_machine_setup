@@ -38,6 +38,7 @@ Configuring a new computer
 - Oracle Jdk : `java`
 - `node`
 
-
+## Utility Funtcions
+- pull_rebase_directory : To pull latest changes for all repos in the current directory
 
 //TODO:  Looking forward to pick things from Kent's dotfiles https://github.com/kentcdodds/dotfiles/blob/master/.macos

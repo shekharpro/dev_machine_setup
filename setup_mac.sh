@@ -4,43 +4,43 @@ sudo -v
 
 echo "-----------------------------------------------------------------"
 echo "----------------------Installing Homebrew------------------------"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "[Executing] : brew update"
 brew update
 echo "===================Done installing Homebrew======================"
 echo "================================================================="
 echo "--------------------------------------------------------------"
 echo "----------------------Installing Casks------------------------"
-echo "[Executing] : brew cask install launchbar"
-brew cask install launchbar
-echo "[Executing] : brew cask install shiftit"
-brew cask install shiftit
-echo "[Executing] : brew cask install visual-studio-code"
-brew cask install visual-studio-code
-echo "[Executing] : brew cask install dotnet-sdk"
-brew cask install dotnet-sdk
-echo "[Executing] : brew cask install evernote"
-brew cask install evernote
-echo "[Executing] : brew cask install firefox"
-brew cask install firefox
-echo "[Executing] : brew cask install spotify"
-brew cask install spotify
-echo "[Executing] : brew cask install zoomus"
-brew cask install zoomus
-echo "[Executing] : brew cask install 1password"
-brew cask install 1password
-echo "[Executing] : brew cask install iterm2"
-brew cask install iterm2
+echo "[Executing] : brew install launchbar"
+brew install launchbar
+echo "[Executing] : brew install rectangle"
+brew install rectangle
+echo "[Executing] : brew install visual-studio-code"
+brew install visual-studio-code
+echo "[Executing] : brew install dotnet-sdk"
+brew install dotnet-sdk
+echo "[Executing] : brew install evernote"
+brew install evernote
+echo "[Executing] : brew install firefox"
+brew install firefox
+echo "[Executing] : brew install spotify"
+brew install spotify
+echo "[Executing] : brew install zoomus"
+brew install zoomus
+echo "[Executing] : brew install 1password"
+brew install 1password
+echo "[Executing] : brew install iterm2"
+brew install iterm2
 echo "[Executing] : brew install android-studio"
-brew cask install android-studio
-echo "[Executing] : brew cask install google-chat"
-brew cask install google-chat
-echo "[Executing] : brew cask install macpass"
-brew cask install macpass
-echo "brew cask install postman"
-brew cask install postman
-echo "brew cask install dbeaver-community"
-brew cask install dbeaver-community
+brew install android-studio
+echo "[Executing] : brew install google-chat"
+brew install google-chat
+echo "[Executing] : brew install macpass"
+brew install macpass
+echo "brew postman"
+brew install postman
+echo "brew dbeaver-community"
+brew install dbeaver-community
 echo "===================Done installing casks======================"
 echo "=============================================================="
 echo "-----------------------------------------------------------------"

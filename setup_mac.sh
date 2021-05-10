@@ -98,20 +98,19 @@ echo "==============================================================="
 echo "---------------------------------------------------------------"
 echo "----------------------Adding customizations to Zshrc------------------------"
 echo "[Executing] : Adding pull_rebase_directory Function"
-cat << EOF >> ~/.zshrc¬
-pull_rebase_directory() {¬
-  count=1¬
-  for i in */.git¬
-  do¬
-    cd $i/..¬
-    echo "\u001b[47m\u001b[30;1mUpdating Git Repo ($count) [ $(pwd) ]\u001b[0m"¬
-    git stash && git pull -r¬
-    echo "\u001b[47m\u001b[30;1m-- Done Updating the Repo--\u001b[0m"¬
-    cd ..¬
-    count=$((count+1))¬
-  done¬
-}¬
-EOF¬
+cat << EOF >> ~/.zshrc
+pull_rebase_directory () {
+  count=1
+  for i in */.git
+  do
+    cd $i/..
+    echo "\u001b[47m\u001b[30;1mUpdating Git Repo ($count) [ $(pwd) ]\u001b[0m"
+    git stash && git pull -r
+    echo "\u001b[47m\u001b[30;1m-- Done Updating the Repo--\u001b[0m"
+    cd ..
+    ((count++))
+  done
+}
 echo "===================Done Adding customizations to Zshrc======================"
 echo "==============================================================="
 echo "---------------------------------------------------------------------"

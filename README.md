@@ -45,10 +45,10 @@ Configuring a new computer
 
 # Tips 
 ## Find Java versions
-Run `/usr/libexec/java_home -V` to list versions
-Run `/usr/libexec/java_home -v XX` to retrive the java path, specify version in place of `XX` for example `11` for Java 11
+- Run `/usr/libexec/java_home -V` to list versions
+- Run `/usr/libexec/java_home -v XX` to retrive the java path, specify version in place of `XX` for example `11` for Java 11
 
 ## Setup JAVA version
-Run "export JAVA_HOME=`/usr/libexec/java_home -v XX`" with `XX` being the version you want to set
+- Run "export JAVA_HOME=`/usr/libexec/java_home -v XX`" with `XX` being the version you want to set
 
 

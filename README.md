@@ -51,4 +51,8 @@ Configuring a new computer
 ## Setup JAVA version
 - Run `export JAVA_HOME=$(/usr/libexec/java_home -v XX.XX)` with `XX` being the version you want to se, like `export JAVA_HOME=$(/usr/libexec/java_home -v 11)`  for Java 11
 
+## Setup JQ Color scheme
+- Run `export JQ_COLORS="2;30:0;31:1;31:0;34:0;32:1;37:1;37"`
+- Add above to .zshrc
+
 

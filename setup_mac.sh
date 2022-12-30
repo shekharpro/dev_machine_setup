@@ -65,6 +65,8 @@ echo "[Executing] : brew install bat"
 brew install bat
 echo "[Executing] : brew install oracle-jdk"
 brew install oracle-jdk
+echo "[Executing] : brew install jq"
+brew install jq
 echo "[Executing] : brew cleanup"
 brew cleanup
 echo "===================Done installing Formulas======================"

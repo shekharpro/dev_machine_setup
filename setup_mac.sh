@@ -113,6 +113,25 @@ pull_rebase_directory () {
     ((count++))
   done
 }
+echo "[Executing] : Adding kafka_helper_count_messages Function"
+cat << EOF >> ~/.zshrc
+kafka_helper_count_messages() {
+  while getopts b:t: flag
+  do
+      case "${flag}" in
+          b) broker=${OPTARG};;
+          t) topic=${OPTARG};;
+      esac
+  done
+  local endCount=$(kafka-run-class.sh kafka.tools.GetOffsetShell --bootstrap-server="$broker"  --topic  "$topic" --time -1 |  awk -F  ":" '{sum += $3} END {print sum}')
+  local startCount=$(kafka-run-class.sh kafka.tools.GetOffsetShell --bootstrap-server="$broker"  --topic  "$topic" --time -2 |  awk -F  ":" '{sum += $3} END {print sum}')
+  local diff=$((endCount-startCount))
+  LC_NUMERIC="en_US"
+  local formattedDiff=$(builtin printf "%'d\n" $diff)
+  local formattedEndCount=$(builtin printf "%'d\n" endCount)
+  local formattedStartCount=$(builtin printf "%'d\n" startCount)
+  echo "StartCount: $formattedStartCount | EndCount:$formattedEndCount | Total In Topic $topic: $formattedDiff"
+}
 echo "===================Done Adding customizations to Zshrc======================"
 echo "==============================================================="
 echo "---------------------------------------------------------------------"

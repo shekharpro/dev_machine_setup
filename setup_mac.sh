@@ -105,15 +105,20 @@ echo "[Executing] : Adding pull_rebase_directory Function"
 cat << EOF >> ~/.zshrc
 pull_rebase_directory () {
   count=1
+  currentDirectory=$(pwd)
   for i in */.git
   do
+    echo $i
     cd $i/..
-    echo "\u001b[47m\u001b[30;1mUpdating Git Repo ($count) [ $(pwd) ]\u001b[0m"
-    git stash && git pull -r
-    echo "\u001b[47m\u001b[30;1m-- Done Updating the Repo--\u001b[0m"
-    cd ..
+    echo "\u001b[47m\u001b[30;1mQueuing Update for Git Repo () [ $(pwd) ]\u001b[0m"
+    git stash && git pull -r --all &
+    # echo "\u001b[47m\u001b[30;1m-- Done Updating the Repo--\u001b[0m"
+    cd $currentDirectory
+    echo pwd $(pwd)
     ((count++))
   done
+  wait
+  echo "\u001b[47m\u001b[30;1m-- Done Updating [$count] Repos--\u001b[0m"
 }
 echo "[Executing] : Adding kafka_helper_count_messages Function"
 cat << EOF >> ~/.zshrc

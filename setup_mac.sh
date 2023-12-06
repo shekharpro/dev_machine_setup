@@ -108,13 +108,11 @@ pull_rebase_directory () {
   currentDirectory=$(pwd)
   for i in */.git
   do
-    echo $i
     cd $i/..
     echo "\u001b[47m\u001b[30;1mQueuing Update for Git Repo () [ $(pwd) ]\u001b[0m"
     git stash && git pull -r --all &
     # echo "\u001b[47m\u001b[30;1m-- Done Updating the Repo--\u001b[0m"
     cd $currentDirectory
-    echo pwd $(pwd)
     ((count++))
   done
   wait

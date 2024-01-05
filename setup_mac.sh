@@ -120,7 +120,7 @@ echo "================================================================="
 echo "-----------------------------------------------------------------"
 echo "----------------Adding customizations to Zshrc-------------------"
 echo "[Executing] : Adding pull_rebase_directory Function"
-cat << EOF >> ~/.zshrc
+cat <<EOF >> ~/.zshrc
 pull_rebase_directory () {
   count=1
   currentDirectory=$(pwd)
@@ -136,8 +136,9 @@ pull_rebase_directory () {
   wait
   echo "\u001b[47m\u001b[30;1m-- Done Updating [$count] Repos--\u001b[0m"
 }
+EOF
 echo "[Executing] : Adding kafka_helper_count_messages Function"
-cat << EOF >> ~/.zshrc
+cat <<EOF >> ~/.zshrc
 kafka_helper_count_messages() {
   while getopts b:t: flag
   do
@@ -155,6 +156,8 @@ kafka_helper_count_messages() {
   local formattedStartCount=$(builtin printf "%'d\n" startCount)
   echo "StartCount: $formattedStartCount | EndCount:$formattedEndCount | Total In Topic $topic: $formattedDiff"
 }
+EOF
+
 echo "==============Done Adding customizations to Zshrc================"
 echo "================================================================="
 echo "-----------------------------------------------------------------"

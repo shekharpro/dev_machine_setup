@@ -8,9 +8,19 @@ echo "----------------------Installing Homebrew------------------------"
 echo "[Executing] : brew update"
 brew update
 echo "===================Done installing Homebrew======================"
+echo "-----------------------------------------------------------------"
+echo "----------------------Setting Homebrew Taps----------------------"
 echo "================================================================="
-echo "--------------------------------------------------------------"
-echo "----------------------Installing Casks------------------------"
+echo "[Executing] : brew tap homebrew/cask-fonts"
+brew tap homebrew/cask-fonts
+echo "[Executing] : brew tap birdayz/kaf"
+brew tap birdayz/kaf
+echo "[Executing] : brew tap pomerium/tap"
+brew tap pomerium/tap
+echo "===================Done Setting Homebrew Taps===================="
+echo "-----------------------------------------------------------------"
+echo "-----------------------------------------------------------------"
+echo "----------------------Installing Casks---------------------------"
 echo "[Executing] : brew install launchbar"
 brew install launchbar
 echo "[Executing] : brew install rectangle"
@@ -41,8 +51,10 @@ echo "brew postman"
 brew install postman
 echo "brew dbeaver-community"
 brew install dbeaver-community
-echo "===================Done installing casks======================"
-echo "=============================================================="
+echo "[Executing] : brew install font-jetbrains-mono-nerd-font"
+brew install font-jetbrains-mono-nerd-font
+echo "===================Done installing casks========================="
+echo "================================================================="
 echo "-----------------------------------------------------------------"
 echo "----------------------Installing Formulas------------------------"
 echo "[Executing] : brew install gpg2"
@@ -69,12 +81,18 @@ echo "[Executing] : brew install jq"
 brew install jq
 echo "[Executing] : bbrew install fzf"
 brew install fzf
+echo "[Executing] : brew install nvim"
+brew install nvim
+echo "[Executing] : brew install kaf"
+brew install kaf
+echo "[Executing] : brew install pomerium-cli"
+brew install pomerium-cli
 echo "[Executing] : brew cleanup"
 brew cleanup
 echo "===================Done installing Formulas======================"
 echo "================================================================="
-echo "------------------------------------------------------------"
-echo "----------------------Updating zshrc------------------------"
+echo "-----------------------------------------------------------------"
+echo "----------------------Updating zshrc-----------------------------"
 echo "[Executing] : Installing ZSH : sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -91,16 +109,16 @@ echo "export NVM_DIR=\"$HOME/.nvm\"
 echo "[Executing] : Sourcing ~/.zshrc"
 source ~/.zshrc
 echo "[Executing] : Done Sourcing"
-echo "===================Done Updating zshrc======================"
-echo "============================================================"
-echo "---------------------------------------------------------------"
-echo "----------------------Installing NodeJs------------------------"
+echo "===================Done Updating zshrc==========================="
+echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "----------------------Installing NodeJs--------------------------"
 echo "[Executing] : nvm install node"
 nvm install node
-echo "===================Done Installing NodeJS======================"
-echo "==============================================================="
-echo "---------------------------------------------------------------"
-echo "----------------------Adding customizations to Zshrc------------------------"
+echo "===================Done Installing NodeJS========================"
+echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "----------------Adding customizations to Zshrc-------------------"
 echo "[Executing] : Adding pull_rebase_directory Function"
 cat << EOF >> ~/.zshrc
 pull_rebase_directory () {
@@ -137,10 +155,10 @@ kafka_helper_count_messages() {
   local formattedStartCount=$(builtin printf "%'d\n" startCount)
   echo "StartCount: $formattedStartCount | EndCount:$formattedEndCount | Total In Topic $topic: $formattedDiff"
 }
-echo "===================Done Adding customizations to Zshrc======================"
-echo "==============================================================="
-echo "---------------------------------------------------------------------"
-echo "----------------------Updating Apple Settings------------------------"
+echo "==============Done Adding customizations to Zshrc================"
+echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "----------------------Updating Apple Settings--------------------"
 #From https://github.com/donnemartin/dev-setup/blob/master/osx.sh
 echo "[Executing] : defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder
@@ -164,9 +182,9 @@ echo "[Executing] : defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEn
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
+########################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input          #
+########################################################################
 # Trackpad: enable tap to click for this user and for the login screen
 echo "[Executing] : defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -258,9 +276,9 @@ echo "[Executing] : defaults write com.apple.dock autohide -bool true"
 defaults write com.apple.dock autohide -bool true
 
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
+########################################################################
+# Terminal & iTerm 2                                                   #
+########################################################################
 
 # Only use UTF-8 in Terminal.app
 echo "[Executing] : defaults write com.apple.terminal StringEncodings -array 4"
@@ -270,16 +288,16 @@ defaults write com.apple.terminal StringEncodings -array 4
 echo "[Executing] : defaults write com.googlecode.iterm2 PromptOnQuit -bool false"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
+########################################################################
+# Kill affected applications                                           #
+########################################################################
 echo "[Executing] : Killing  cfprefsd Dock Finder Safari SystemUIServer"
 for app in "cfprefsd" "Dock" "Finder" \
     "Safari" "SystemUIServer"; do
     killall "${app}" > /dev/null 2>&1
 done
-echo "===================Done Updating Apple Settings======================"
-echo "====================================================================="
+echo "===================Done Updating Apple Settings==================="
+echo "=================================================================="
 
 echo "[Executing] : Copying VIMRC : dot_vimrc ~/.vimrc"
 cp dot_vimrc ~/.vimrc

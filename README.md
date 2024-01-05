@@ -24,6 +24,8 @@ Configuring a new computer
 - Google-chat
 - Macpass
 - Postman
+- JetBrains Ner Fonts
+- Dbeaver-Community
 
 ## Tools
 - gpg2 : `gpg`
@@ -36,10 +38,16 @@ Configuring a new computer
 - `tig`
 - `bat`
 - Oracle Jdk : `java`
+- `jq`
+- `fzf`
+- `nvim`
 - `node`
+- `kaf`
+- `pomerium-cli`
 
 ## Utility Funtcions
 - `pull_rebase_directory` : To pull latest changes for all repos in the current directory
+- `kafka_helper_count_messages` : To count messages in a kafka topic, this needs Kafka CLI tools to be installed in path
 
 //TODO:  Looking forward to pick things from Kent's dotfiles https://github.com/kentcdodds/dotfiles/blob/master/.macos
 

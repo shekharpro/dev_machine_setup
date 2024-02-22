@@ -53,6 +53,8 @@ echo "brew dbeaver-community"
 brew install dbeaver-community
 echo "[Executing] : brew install font-jetbrains-mono-nerd-font"
 brew install font-jetbrains-mono-nerd-font
+echo "[Executing] :  brew install font-fira-code-nerd-font"
+ brew install font-fira-code-nerd-font
 echo "===================Done installing casks========================="
 echo "================================================================="
 echo "-----------------------------------------------------------------"
@@ -111,6 +113,23 @@ source ~/.zshrc
 echo "[Executing] : Done Sourcing"
 echo "===================Done Updating zshrc==========================="
 echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "------------------Installing powerlevel10k-----------------------"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo "===============Done Installing powerlevel10k====================="
+echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "---------------Installing zsh-autosuggestions--------------------"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+echo "============Done Installing zsh-autosuggestions=================="
+echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "-------------Installing zsh-syntax-highlighting------------------"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "==========Done Installing zsh-syntax-highlighting================"
+echo "================================================================="
+omz plugin enable zsh-autosuggestions
+omz plugin enable zsh-syntax-highlighting
 echo "-----------------------------------------------------------------"
 echo "----------------------Installing NodeJs--------------------------"
 echo "[Executing] : nvm install node"

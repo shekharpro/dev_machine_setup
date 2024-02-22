@@ -128,8 +128,13 @@ echo "-------------Installing zsh-syntax-highlighting------------------"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 echo "==========Done Installing zsh-syntax-highlighting================"
 echo "================================================================="
+echo "-----------------------------------------------------------------"
+echo "---------Enabling zsh plugins and setting zsh theme--------------"
 omz plugin enable zsh-autosuggestions
 omz plugin enable zsh-syntax-highlighting
+omz theme use powerlevel10k/powerlevel10k
+echo "=======Done Enabling zsh plugins and setting zsh theme==========="
+echo "================================================================="
 echo "-----------------------------------------------------------------"
 echo "----------------------Installing NodeJs--------------------------"
 echo "[Executing] : nvm install node"

@@ -56,6 +56,7 @@ runSetup() {
   zsh_setup_plugins_and_themes
   install_latest_nodejs
   add_custom_functions_to_zshrc
+  update_apple_settings
 }
 
 brew_init() {
